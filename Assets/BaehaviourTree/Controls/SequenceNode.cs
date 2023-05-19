@@ -7,6 +7,12 @@ namespace BT
     public class SequenceNode : ControlNode
     {
         private int currentChildIdx_ = 0;
+
+        public  SequenceNode(string name, NodeConfiguration config) : base(name, config)
+        {
+
+        }
+
         internal override NodeStatus Tick()
         {
             SetStatus(NodeStatus.RUNNING);

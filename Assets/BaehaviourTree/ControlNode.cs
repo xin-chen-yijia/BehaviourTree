@@ -8,6 +8,11 @@ namespace BT
     {
         protected List<TreeNode> childrenNodes_;
 
+        public ControlNode(string name, NodeConfiguration config) : base(name, config)
+        {
+
+        }
+
         public void AddChild(TreeNode node)
         {
             childrenNodes_.Add(node);
@@ -40,10 +45,9 @@ namespace BT
         }
 
 
-        public override NodeType type()
+        public override NodeType GetNodeType()
         {
             return NodeType.CONTROL;
         }
-
     }
 }
